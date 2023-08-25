@@ -9,18 +9,28 @@ function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const headers = {
-    Authorization : `Bearer ${token}`,
-  }
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://lasta-wu2q.onrender.com/login', { email, password } , {headers});
+      const response = await axios.post('https://lasta-wu2q.onrender.com/login', { email, password });
       if (response.data.success === true) {
         const token = response.data.token; // 'jwt' le clé de stockage
         localStorage.setItem('jwt',token); // Save the token in localStorage
         setUserToken(token);
-      navigate('/products'); // Call handleLogin after successful login
+        const headers = {
+          Authorization: `Bearer ${token}`,
+        }
+        try {
+          // Utilisation de la variable 'headers' ici pour inclure le token dans l'en-tête
+          const response = await axios.post('https://lasta-wu2q.onrender.com/login', { headers });
+          if (response.data.success === true) { 
+            navigate('/products')
+          }
+          // Gérer la réponse de la requête sécurisée
+        } catch (error) {
+          console.error('Erreur lors de la requête:', error);
+          // Gérer l'erreur de la requête sécurisée
+        }
       }
     } catch (err) {
       console.log('Fetch error:', err);
