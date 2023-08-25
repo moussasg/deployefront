@@ -25,8 +25,8 @@ function UserForm() {
         navigate('/login')
       }
     }
-    catch(error){
-          console.error('Erreur lors de la requête:', error);
+      catch(error) {
+          console.error('Erreur lors de la requête:', error.message);
         }
   return (
     <>
