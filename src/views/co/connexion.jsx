@@ -9,10 +9,13 @@ function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const headers = {
+    Authorization : `Bearer ${token}`,
+  }
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://lasta-wu2q.onrender.com/login', { email, password });
+      const response = await axios.post('https://lasta-wu2q.onrender.com/login', { email, password } , {headers});
       if (response.data.success === true) {
         const token = response.data.token; // 'jwt' le clé de stockage
         localStorage.setItem('jwt',token); // Save the token in localStorage
