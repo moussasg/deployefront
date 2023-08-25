@@ -22,8 +22,8 @@ function Login() {
         }
         try {
           // Utilisation de la variable 'headers' ici pour inclure le token dans l'en-tête
-          const response = await axios.post('https://lasta-wu2q.onrender.com/login', { headers });
-          if (response.data.success === true) { 
+          const responsed = await axios.post('https://lasta-wu2q.onrender.com/login', { headers });
+          if (responsed.data.success === true) { 
             navigate('/products')
           }
           // Gérer la réponse de la requête sécurisée
