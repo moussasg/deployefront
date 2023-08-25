@@ -14,9 +14,6 @@ function UserForm() {
     if (name === 'email') setEmail(value);
     if (name === 'password') setPassword(value);
   };
-  const headers = {
-    Authorization: `Bearer ${token}`, // Inclure le token JWT
-  };
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -30,8 +27,8 @@ function UserForm() {
         }
         try {
           // Utilisation de la variable 'headers' ici pour inclure le token dans l'en-tête
-          const response = await axios.post('https://lasta-wu2q.onrender.com/signup', { headers });
-          if (response.data.success === true) { 
+          const responsetwo = await axios.post('https://lasta-wu2q.onrender.com/signup', { headers });
+          if (responsetwo.data.success === true) { 
             navigate('/login')
           }
           // Gérer la réponse de la requête sécurisée
