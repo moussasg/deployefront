@@ -22,12 +22,13 @@ function Login() {
         }
         try {
           // Utilisation de la variable 'headers' ici pour inclure le token dans l'en-tête
-          const responsed = await axios.post('https://lasta-wu2q.onrender.com/login', null , { headers });
+          const responsed = await axios.post('https://lasta-wu2q.onrender.com/login', null , { headers } );
           if (responsed.data.success === true) { 
             navigate('/products')
           }
           // Gérer la réponse de la requête sécurisée
-        } catch (error) {
+        } 
+        catch (error) {
           console.error('Erreur lors de la requête:', error);
           // Gérer l'erreur de la requête sécurisée
         }
