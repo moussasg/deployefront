@@ -17,7 +17,7 @@ function UserForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('https://lasta-wu2q.onrender.com/signup', { email, password })
+      const response = await axios.post('https://backend-dkec.onrender.com/signup', { email, password })
       if (response.data.success === true) {
         const token = response.data.token; // 'jwt' le clé de stockage
         localStorage.setItem('jwt',token); // Save the token in localStorage
@@ -26,7 +26,7 @@ function UserForm() {
       }
     }
       catch(error) {
-          console.error('Erreur lors de la requête:', error.response);
+          console.error('Erreur lors de la requête:', error.response?.data);
         }
       }
   return (
