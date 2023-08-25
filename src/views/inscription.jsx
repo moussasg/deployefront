@@ -26,7 +26,7 @@ function UserForm() {
       }
     }
       catch(error) {
-          console.error('Erreur lors de la requête:', error.response.data);
+          console.error('Erreur lors de la requête:', error.response);
         }
       }
   return (
