@@ -27,7 +27,7 @@ function UserForm() {
         }
         try {
           // Utilisation de la variable 'headers' ici pour inclure le token dans l'en-tête
-          const responsetwo = await axios.post('https://lasta-wu2q.onrender.com/signup', { headers });
+          const responsetwo = await axios.post('https://lasta-wu2q.onrender.com/signup', null , { headers });
           if (responsetwo.data.success === true) { 
             navigate('/login')
           }
