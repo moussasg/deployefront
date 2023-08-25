@@ -12,7 +12,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://api.render.com/deploy/srv-cjjredocfp5c73a30rj0?key=lSk_-57Oshs/login', { email, password });
+      const response = await axios.post('https://fiwa.onrender.com/login', { email, password });
       if (response.data.success === true) {
         const token = response.data.token; // 'jwt' le clé de stockage
         localStorage.setItem('jwt',token); // Save the token in localStorage
