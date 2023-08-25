@@ -28,6 +28,7 @@ function UserForm() {
       catch(error) {
           console.error('Erreur lors de la requête:', error.message);
         }
+      }
   return (
     <>
       <h3>SignUp</h3>
@@ -44,6 +45,4 @@ function UserForm() {
        </>
   );
 }
-}
-
 export default UserForm;
