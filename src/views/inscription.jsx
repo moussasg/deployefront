@@ -17,7 +17,7 @@ function UserForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-    const response = await axios.post('https://fiwa.onrender.com/signup', {email,password});
+    const response = await axios.post('https://lasta-wu2q.onrender.com/signup', {email,password});
     console.log(response)
     if (response.data.success===true) { // il faut déclaré success dans le backedn f la réponse li trécupiriha
       const token = response.data.token; // 'jwt' le clé de stockage
