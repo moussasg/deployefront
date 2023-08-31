@@ -4,6 +4,10 @@
     justify-content: flex-end;
     gap: 40px;
 }
+.logopage img  {
+    max-width: 100%; /* Make the images responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
 .but {
     display: flex;
     align-items: center;

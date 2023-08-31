@@ -9,7 +9,9 @@ export default function Home() {
   return (
     <>
     <div className={classe.home}>
-    <img src={LogoAceuill}></img>
+      <div className={classe.logopage}>
+      <img src={LogoAceuill}></img>
+      </div>
     <div className={classe.but}>
  <button type="button" class="btn btn-outline-primary"> 
  <Link to="/Signup"> Sign Up</Link></button>

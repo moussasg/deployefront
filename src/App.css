@@ -52,10 +52,23 @@ h1 {
 .tik {
   background-color: red;
 }
+ iframe {
+  max-width: 100%;
+}
 .res {
   display: flex;
   gap: 20px;
   justify-content: space-evenly;
+}
+.App {
+  max-width: 2000px; /* Set a maximum width for larger screens */
+  width: 80vw;
+}
+@media screen and (max-width: 200px) {
+  .App {
+    max-width: 100vw; /* Allow the container to expand to full width on small screens */
+    /* Adjust other styling properties as needed */
+  }
 }
 .cont {
   display: flex;
@@ -70,18 +83,6 @@ h1 {
   justify-content: center;
 }
 
-@media (max-width:700px) {
-  /* Add your mobile styles here */
-  /* Example: Adjusting the layout for mobile screens */
-  .container {
-    max-width: 100%; /* Set the maximum width of the container to the screen width */
-    overflow: hidden; /* Hide any content that overflows from the container */
-    /* Add other styling properties as needed */
-  }
-  /* Example: Decreasing font size for headings */
-  /* Example: Adjusting spacing between elements */
-  /* Add other styles specific to mobile screens */
-}
 
 
 
