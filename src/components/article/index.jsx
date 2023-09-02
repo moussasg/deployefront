@@ -172,7 +172,7 @@ function Card() {
               {xi.marque} {xi.nom} - Quantité: {quantité[xi.nom] || 1} - Prix: {xi.prix * (quantité[xi.nom] || 1)} - 
         <div onClick={()=>handeldelete(xi)}> <Delbut/>  </div>  
       <div className={classes.acheté}>
-      {showcomp ? <Formcomands quantité={xi.quantité} prix={xi.prix} marque={xi.marque} nom={xi.nom} /> : <button onClick={()=>confirma(xi)}>Acheté</button>}
+      {showcomp ? <Formcomands quantité={xi.quantité} prix={xi.prix} marque={xi.marque} nom={xi.nom} /> : <button className={classes.monBouton} onClick={()=>confirma(xi)}>Acheté</button>}
       </div>
       </div>
               {/*xi psq j'ai mapé avec xi*/}
@@ -187,10 +187,8 @@ function Card() {
   }
   return (
     <>
-    <div className={classes.logout}>
-                  <Logout/>
-                  </div>
       <div className={classes.filtre}>
+      <Logout/>
         <Link to='/products'>  All Products</Link> 
         <br/>
     <br/>

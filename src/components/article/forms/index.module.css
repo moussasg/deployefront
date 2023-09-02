@@ -3,3 +3,22 @@
     flex-direction: column;
     align-items: center
 }
+@media screen and (max-width:300px) {
+    .inscr {
+        display: flex;
+        max-width: 100vw;
+        flex-direction: column;
+    }  
+}
+button.monBouton {
+    background-color: #9370DB;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  width: 100px;
+  height: 80px;
+  }
+  button.monBouton:hover {
+    background-color: #8A2BE2;
+  }

@@ -33,7 +33,7 @@ export default function formcomands(props) {
         <input type="adress" name="adress" value={adress} onChange={handleChange} />
         <h5>Numéro :</h5>
         <input type="numero" name="numero" value={numero} onChange={handleChange} />
-        <button type="submit">Acheté</button>
+        <button className={stylee.monBouton} type="submit">Acheté</button>
       </div>
     </form>
     </>

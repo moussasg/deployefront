@@ -5,11 +5,28 @@
   margin: 0 auto; /* Centrer les images horizontalement si nécessaire */
   /* Autres styles spécifiques aux images à l'intérieur de .table */
 }
+button.monBouton {
+  background-color: #9370DB;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+width: 100px;
+height: 80px;
+}
+button.monBouton:hover {
+  background-color: #8A2BE2;
+}
 @media screen and (max-width:250px) {
   .tout {
     width: 100vw;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column
+  }
+   .del {
+    width: 100vw;
+    display: flex;
+    flex-direction: column
    }
 }
 .filtre {
@@ -17,10 +34,6 @@
 }
   td{
     border: 2px solid black;
-  }
-  .logout {
-display: flex;
-justify-content: center;
   }
   .acheté {
     display: flex;
