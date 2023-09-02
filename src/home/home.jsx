@@ -2,9 +2,7 @@ import React from 'react'
 import classe from "./index.module.css"
 import LogoAceuill from "./../assets/logos.jpg"
 import 'bootstrap/dist/js/bootstrap.js';
-import Signup from "../views/inscription"
 import 'bootstrap/dist/css/bootstrap.css';
-import { Link } from 'react-router-dom';
 export default function Home() {
   return (
     <>
@@ -13,8 +11,6 @@ export default function Home() {
       <img src={LogoAceuill}></img>
       </div>
     <div className={classe.but}>
- <button type="button" class="btn btn-outline-primary"> 
- <Link to="/Signup"> Sign Up</Link></button>
     </div>
     </div>
        </>

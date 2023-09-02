@@ -197,7 +197,6 @@ function Card() {
          <h3>{FindId.buttonText}</h3>
          <img width='200px' height='100px'src={FindId.image}></img>
         <p>filtré par</p> 
-      </div>
       <select value={selectram} onChange={(e) => setselectram(e.target.value)}>
         <option value="">RAM</option>
         {[...new Set(FindId.produits.map((el) => el.ram))].map((ram) => (
@@ -216,6 +215,7 @@ function Card() {
           <option key={model} value={model}>{model}</option>
         ))}
       </select>
+      </div>
       {renderSmartphones()}
       {renderPanier()}
     </>

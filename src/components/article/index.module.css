@@ -5,6 +5,9 @@
   margin: 0 auto; /* Centrer les images horizontalement si nécessaire */
   /* Autres styles spécifiques aux images à l'intérieur de .table */
 }
+.filtre {
+  max-width: 100vw;
+}
   td{
     border: 2px solid black;
   }
