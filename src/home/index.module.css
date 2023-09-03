@@ -5,7 +5,7 @@
     gap: 40px;
 }
 .logopage img  {
-    max-width: 100%; /* Make the images responsive */
+    max-width: 80vw; /* Make the images responsive */
     height: auto; /* Maintain aspect ratio */
   }
 .but {
