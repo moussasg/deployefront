@@ -77,6 +77,7 @@ function App() {
       <Route path='' element={<Home/>}/>
       <Route path="/MesSmartphones/:id" element={<Card data={MesSmartphones} />} />
       </Routes> 
+      <br/>
       <div className='mapos'>
         <h2> Localisation </h2>
         <Location /> <br />
