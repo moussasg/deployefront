@@ -12,7 +12,7 @@ function Login() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('https://backend-dkec.onrender.com/login', { email, password })
+      const response = await axios.post('http://localhost:3002/login', { email, password })
       if (response.data.success === true) {
         const token = response.data.token; // 'jwt' le clé de stockage
         localStorage.setItem('jwt',token); // Save the token in localStorage

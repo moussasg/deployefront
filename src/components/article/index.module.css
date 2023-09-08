@@ -17,9 +17,20 @@ height: 80px;
 button.monBouton:hover {
   background-color: #8A2BE2;
 }
+.tout {
+  width: 100%;
+  display: flex;
+}
+@media screen and (max-width:1140px) {
+.tout {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+}
 @media screen and (max-width:250px) {
   .tout {
-    max-width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
   }
@@ -43,13 +54,10 @@ button.monBouton:hover {
     display: flex;
     flex-direction: column;
   }
-  .tout {
-    width: 100vw;
-    display: flex;
-  }
   .ach {
     display: flex;
     justify-content: center;
+    align-items: center;
     align-items: center;
   }
   .plusmoinsajout {
