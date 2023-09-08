@@ -1,3 +1,21 @@
+.typewriter-container {
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  color: black; /* Couleur du texte */
+  padding: 20px;
+  border-radius: 5px;
+  width: 50vw; /* Largeur de la zone de texte */
+  margin: 0 auto; /* Centrer horizontalement */
+}
+/* Styles spécifiques pour le curseur (facultatif) */
+.typewriter-container .Cursor {
+  color: #ffc107; /* Couleur du curseur */
+}
+@media screen and (max-width:1290px) {
+  .typewriter-container{
+    display: none;
+  }
+}
 @media screen and (min-width:500px) and (max-width:600px) {
   .nav {
     width: 100vw;
@@ -13,8 +31,11 @@
   .mapos {
     width: 70%;
     display: flex;
-    justify-content: center;
-  }
+    flex-direction: column
+    }
+    .typewriter-container{
+      display: none;
+    }
 }
 @media screen and (max-width:250px) {
   .iframe {
@@ -41,6 +62,9 @@ height: 50vh;
     display: flex;
     width: 100vw;
     flex-direction: column;
+  }
+  .typewriter-container{
+    display: none;
   }
 } 
 /*fin mediascreen*/
