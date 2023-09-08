@@ -17,7 +17,7 @@ function UserForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('https://ecommercebymern.netlify.app/signup', { email, password })
+      const response = await axios.post('https://backend-dkec.onrender.com/signup', { email, password })
       console.log(response)
       if (response.data.success === true) {
         const token = response.data.token; // 'jwt' le clé de stockage
