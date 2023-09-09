@@ -40,7 +40,8 @@ function UserForm() {
         <input type="email" name="email" value={email} onChange={handleChange} />
         <h5>Password :</h5>
         <input type="password" name="password" value={password} onChange={handleChange} />
-        <button type="submit">Submit</button>
+        <br/>
+        <button className={classe.monBouton} type="submit">Sign Up</button>
        </div>
        </form>
        </>

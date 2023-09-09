@@ -40,7 +40,7 @@ function App() {
     // Ajoutez d'autres styles spécifiques au mode sombre ic
   };
   const normalStyles = { // on introduit aprés le return on passant par prop
-    backgroundColor: '#fff',  
+    backgroundColor: '#fff',
     color: '#333',
     // Ajoutez d'autres styles spécifiques au mode normal ici
   };
@@ -48,7 +48,7 @@ function App() {
   const handeldark = () => { // ki tecliki 3la handeldark 
     setDarkMode(!darkMode)  // tweli true
   }
-    return (  // darkMode tkone false
+  return (  // darkMode tkone false
 <AuthProvider>
   <>
     <div className="App" style={darkMode ? darkModeStyles  : normalStyles}> {/*if darkMode true =>darkModeStyles else normalStyles */} 
@@ -74,7 +74,7 @@ function App() {
         <Route path="/login" element={<Connexion/>}/>
         <Route path='/products' element={<Products/>}/>
         <Route path='/logout' element={<Logout/>}/>
-      <Route path='' element={<Home/>}/>
+      <Route path='/' element={<Home/>}/>
       <Route path="/MesSmartphones/:id" element={<Card data={MesSmartphones} />} />
       </Routes> 
       <br/>

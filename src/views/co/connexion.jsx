@@ -33,8 +33,9 @@ function Login() {
         <h5>Email:</h5>
         <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
         <h5>Password:</h5>
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        <button type="submit">Login</button>
+        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />        <br/>
+
+        <button className={classes.monBouton} type="submit">Sign In</button>
        </div>
       </form>
     </div>

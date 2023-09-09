@@ -11,7 +11,8 @@
 .typewriter-container .Cursor {
   color: #ffc107; /* Couleur du curseur */
 }
-@media screen and (max-width:1290px) {
+
+@media screen and (max-width:1000px) {
   .typewriter-container{
     display: none;
   }
