@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import logsi from "../assets/logsi.png"
+import logsi from "../../assets/logsi.png"
 import { useNavigate } from 'react-router-dom';
 import classe from "./ins.module.css"
-import { useAuth } from '../autcontex';
+import { useAuth } from '../../autcontex';
 function UserForm() {
   const navigate = useNavigate()
   const { setUserToken } = useAuth(); // Destructure setUserToken from AuthContext

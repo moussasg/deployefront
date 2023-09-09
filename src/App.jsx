@@ -10,7 +10,7 @@ import Gite from "../src/assets/github.png"
 import In from "./assets/in.png"
 import Products from "./store/nproducts"
 import { MesSmartphones } from './constant/toutemarque'; // constante de tout mon magasin
-import Inscription from "./views/inscription"
+import Inscription from "./views/inscriptions/inscription"
 import Follow from './components/matui/follow';
 import Connexion from "./views/co/connexion"
 import Home from  "./home/home"
@@ -24,7 +24,7 @@ import Insta from './components/matui/insta';
 import Tik from "./assets/tik.jpg"  
 import Darker from './components/matui/darker';
 import { Routes  , Route , Link } from 'react-router-dom';
-import Logout from "./views/logout"
+import Logout from "./views/logout/logout"
 function App() {
   const { setUserToken } = useAuth(); // Utilisez le hook pour accéder au contexte
   useEffect(() => {

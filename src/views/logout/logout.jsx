@@ -1,6 +1,6 @@
 import React from 'react';
-import axios from 'axios';
 import {useNavigate } from 'react-router-dom';
+import classes from "./index.module.css"
 const Logout = () => {
   const navigate = useNavigate()
   const handleLogout = async () => {
@@ -15,7 +15,7 @@ const Logout = () => {
   };  
   return (
     <div>
-      <button onClick={handleLogout}>Logout</button>
+      <button className={classes.buttlogout} onClick={handleLogout}>Logout</button>
     </div>
   );
 };

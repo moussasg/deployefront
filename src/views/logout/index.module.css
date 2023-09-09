@@ -1,0 +1,12 @@
+button.buttlogout {
+    background-color: #8a8aff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  width: 100px;
+  height: 50px;
+  }
+  button.buttlogout:hover {
+    background-color: #646cff;
+  }

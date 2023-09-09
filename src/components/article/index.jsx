@@ -8,7 +8,7 @@ import Formcomands from "./forms/formcomands";
 import Pan from "./pan.jpeg"
 import Ajoutpan from "../matui/ajoutpa"
 import Addicon from "../matui/addicon";
-import Logout from "../../views/logout";
+import Logout from "../../views/logout/logout";
 import Delbut from "../matui/delbuton.jsx"
 function Card() {
   const { id } = useParams();

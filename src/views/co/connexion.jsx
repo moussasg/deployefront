@@ -11,7 +11,7 @@ function Login() {
   const [password, setPassword] = useState('');
   const handleSubmit = async (event) => {
     event.preventDefault();
-    try {
+    try { /// http://localhost:3002 vers le backed / onrender aussi
       const response = await axios.post('https://backend-dkec.onrender.com/login', { email, password })
       if (response.data.success === true) {
         const token = response.data.token; // 'jwt' le clé de stockage
