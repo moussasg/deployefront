@@ -18,7 +18,7 @@ interface TypewriterProps {
     // Ajoutez d'autres styles spécifiques au mode normal ici
   };
 return (
-<>
+<> {/*if darkmode = darkmodestyle */}
 <div style={darkMode ? darkModeStyles : normalStyles} className="typewriter-container"> {/* Ajoutez une classe parente */}
 <Typewriter typeSpeed={40} loop={0} words={words} />
 <Cursor cursorColor="#ffc107" />

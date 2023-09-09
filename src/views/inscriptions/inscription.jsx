@@ -8,6 +8,7 @@ function UserForm() {
   const navigate = useNavigate()
   const { setUserToken } = useAuth(); // Destructure setUserToken from AuthContext
   const [email, setEmail] = useState('');
+  const [message , setmessage] = useState('') // message vide
   const [password, setPassword] = useState('');
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -24,14 +25,17 @@ function UserForm() {
         localStorage.setItem('jwt',token); // Save the token in localStorage
         setUserToken(token);
         navigate('/login')
+        setmessage('successfull inscription !')
       }
     }
       catch(error) {
           console.error('Erreur lors de la requête:', error.response?.data);
+          setmessage('inscription Error !')
         }
       }
   return (
     <>
+      <p>{message}</p>
       <h3>SignUp</h3>
       <form onSubmit={handleSubmit}>
       <img height='70' width='70' src={logsi} alt='logsi'></img>
