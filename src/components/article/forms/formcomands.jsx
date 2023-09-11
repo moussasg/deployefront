@@ -27,13 +27,13 @@ export default function formcomands(props) {
     <>
     <form onSubmit={handleSubmit}>
     <div className={stylee.inscr}>
-        <h5>Nom et prénom </h5>
+        <h5>First and last name </h5>
         <input type="prenom" name="prenom" value={prenom} onChange={handleChange} />
-        <h5>adresse :</h5>
+        <h5>adress :</h5>
         <input type="adress" name="adress" value={adress} onChange={handleChange} />
-        <h5>Numéro :</h5>
+        <h5>Number :</h5>
         <input type="numero" name="numero" value={numero} onChange={handleChange} />
-        <button className={stylee.monBouton} type="submit">Acheté</button>
+        <button className={stylee.monBouton} type="submit">Buy</button>
       </div>
     </form>
     </>
