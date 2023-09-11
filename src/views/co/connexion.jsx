@@ -4,13 +4,16 @@ import { useNavigate } from 'react-router-dom';
 import classes from "./index.module.css"
 import logsi from "../../assets/logsi.png"
 import { useAuth } from '../../autcontex';
+import Circular from '../../components/matui/chakra';
 function Login() {
+  const [spin , setspin] = useState("Sign In")
   const { setUserToken } = useAuth(); // Destructure setUserToken from AuthContext
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setspin(<Circular/>)
     try { /// http://localhost:3002 vers le backed / onrender aussi
       const response = await axios.post('https://backend-dkec.onrender.com/login', { email, password })
       if (response.data.success === true) {
@@ -35,8 +38,7 @@ function Login() {
         <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
         <h5>Password:</h5>
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />        <br/>
-
-        <button className={classes.monBouton} type="submit">Sign In</button>
+        <button className={classes.monBouton} type="submit">{spin}</button>
        </div>
       </form>
     </div>

@@ -6,6 +6,9 @@
 button.monBouton {
     background-color: #8a8aff;
     color: #fff;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
@@ -14,4 +17,8 @@ button.monBouton {
   }
   button.monBouton:hover {
     background-color: #646cff;
+  }
+  .spin {
+    display: flex;
+    justify-content: center;
   }

@@ -1,5 +1,4 @@
 import React, { useState , useEffect} from "react";
-import axios from "axios";// bibliothèque AJAX 
 import classes from "./index.module.css" ;
 import { Link, useParams } from "react-router-dom" ;
 import { MesSmartphones } from "../../constant/toutemarque";
@@ -50,7 +49,7 @@ function Card() {
     setpanier(updatedPanier);
     const updatedTotalPrice = prix + xi.prix * (quantité[xi.nom] || 1);
     setprix(updatedTotalPrice);
-    confirm(xi.nom + ' ' + 'ajouté avec succès');
+    confirm(xi.nom + ' ' + 'successfully added');
     ref.current?.scrollIntoView({ behavior: 'smooth' });
     const updatedQuantité = { ...xi }; // je return updatedQuantité => les ancien quantité ; meme dans plus
     if (updatedQuantité[produit] > 1) { 
@@ -83,7 +82,7 @@ function Card() {
       }
     });
     if (filteredSmartphones.length === 0) {
-      return <h2>Il n'existe pas de modèle correspondant aux filtres sélectionnés.</h2>;
+      return <h2>There is no template matching the selected filters</h2>;
     }
     return (
       <div className={classes.tout}>
@@ -94,14 +93,14 @@ function Card() {
                 <tr>
                   <td>
                     <h1>{xi.nom}</h1> 
-                    Quantité: {quantité[xi.nom] || 1} {/*|| 1 pour éviter les éreur si yas un probléme sa afiche 1*/}
-                    <h3> Prix: {xi.prix * (quantité[xi.nom] || 1)}</h3>
+                    Quantity: {quantité[xi.nom] || 1} {/*|| 1 pour éviter les éreur si yas un probléme sa afiche 1*/}
+                    <h3> Price: {xi.prix * (quantité[xi.nom] || 1)}</h3>
                     <div className={classes.plusmoinsajout}>
-                    <div onClick={() => plus(xi.nom)}> <Addicon/> </div>
-                    <div onClick={() => moins(xi.nom)}> <button>- </button></div>
+                    <div onClick={() => plus(xi.nom)}> <button>➕</button> </div>
+                    <div onClick={() => moins(xi.nom)}> <button> ➖ </button></div>
                     <div onClick={() => addToCart({nom: xi.nom , prix: xi.prix , marque: xi.marque})}>
                       {/*nas7a9e nom et prix de produits*/}
-                      <Ajoutpan/>
+                      <button className={classes.monBouton}> Add To Cart </button>
                     </div>
                     </div>
                   </td>
@@ -113,12 +112,12 @@ function Card() {
                 </tr>
                 <tr>
                   <td>
-                    <h1>{xi.caractér} / {xi.gb} Stockage</h1>
+                    <h1>{xi.caractér} / {xi.gb} Storage </h1>
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <h1>Prix : {xi.prix}</h1>
+                    <h1>Price : {xi.prix}</h1>
                   </td>
                 </tr>
               </tbody>
@@ -160,19 +159,19 @@ function Card() {
   const renderPanier = () => { // ndiroha f dernier return
     return (
       <div className={classes.panier}>
-        <h2>Panier</h2>
+        <h2>Basket </h2>
         <img src={Pan} alt="ff"></img>
         {panier.length === 0 ? ( /// if panier.length = 0 psq drtlo tablaux videpanier vide si panier n'est pas vide
-          <p> Le panier est vide. </p> // panier drtelha setpanier dakhel addtocart
+          <p> The basket is empty. </p> // panier drtelha setpanier dakhel addtocart
         ) : (
           <ul> {/* si panier n'est pas vide */}
             {panier.map((xi, el1) => ( // panier jate m setpanier li dakhel addtocart
             <h1> <li key={el1} className={classes.delete}> {/*si panier n'est pas vide*/}
             <div className={classes.del}>
-              {xi.marque} {xi.nom} - Quantité: {quantité[xi.nom] || 1} - Prix: {xi.prix * (quantité[xi.nom] || 1)} - 
+              {xi.marque} {xi.nom} - quantity: {quantité[xi.nom] || 1} - Price: {xi.prix * (quantité[xi.nom] || 1)} - 
         <div onClick={()=>handeldelete(xi)}> <Delbut/>  </div>  
       <div className={classes.acheté}>
-      {showcomp ? <Formcomands quantité={xi.quantité} prix={xi.prix} marque={xi.marque} nom={xi.nom} /> : <button className={classes.monBouton} onClick={()=>confirma(xi)}>Acheté</button>}
+      {showcomp ? <Formcomands quantité={xi.quantité} prix={xi.prix} marque={xi.marque} nom={xi.nom} /> : <button className={classes.monBouton} onClick={()=>confirma(xi)}>Buy</button>}
       </div>
       </div>
               {/*xi psq j'ai mapé avec xi*/}
@@ -181,7 +180,7 @@ function Card() {
             ))}
           </ul>
         )}
-        <h3 ref={ref} className={classes.prixtot}>Prix total: {prix}</h3> {/*prix = total*/}
+        <h3 ref={ref} className={classes.prixtot}> total Price : {prix}</h3> {/*prix = total*/}
       </div> 
     );
   }
@@ -194,27 +193,31 @@ function Card() {
     <br/>
          <h3>{FindId.buttonText}</h3>
          <img width='200px' height='100px'src={FindId.image}></img>
-        <p>filtré par</p> 
-      <select value={selectram} onChange={(e) => setselectram(e.target.value)}>
+        <p>Filtered by</p> 
+        <div className={classes.centerselect}>
+      <select className={classes.select} value={selectram} onChange={(e) => setselectram(e.target.value)}>
         <option value="">RAM</option>
         {[...new Set(FindId.produits.map((el) => el.ram))].map((ram) => (
           <option key={ram} value={ram}>{ram}</option>
         ))}
       </select>
-      <select value={selectgb} onChange={(e) => setselectgb(e.target.value)}>
-        <option value="">Stockage</option>
+      <select className={classes.select} value={selectgb} onChange={(e) => setselectgb(e.target.value)}>
+        <option value="">Storage</option>
         {[...new Set(FindId.produits.map((el) => el.gb))].map((gb) => (
           <option key={gb} value={gb}>{gb}</option>
         ))}
       </select>
-      <select value={selectedModel} onChange={(e) => setSelectedModel(e.target.value)}>
-        <option value="">Modèle</option>
+      <select className={classes.select} value={selectedModel} onChange={(e) => setSelectedModel(e.target.value)}>
+        <option value="">model</option>
         {[...new Set(FindId.produits.map((el) => el.nom))].map((model) => (
           <option key={model} value={model}>{model}</option>
         ))}
       </select>
       </div>
+      </div>
+      <br/>
       {renderSmartphones()}
+      <br/>
       {renderPanier()}
     </>
   )}

@@ -6,19 +6,19 @@
   /* Autres styles spécifiques aux images à l'intérieur de .table */
 }
 button.monBouton {
-  background-color: #9370DB;
+  background-color: #8a8aff;
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
 width: 100px;
-height: 80px;
+height: 60px;
 }
 button.monBouton:hover {
-  background-color: #8A2BE2;
+  background-color:#646cff;
 }
 .tout {
-  width: 100%;
+  align-items: flex-start;
   display: flex;
 }
 @media screen and (max-width:1140px) {
@@ -62,6 +62,7 @@ button.monBouton:hover {
   }
   .plusmoinsajout {
     display: flex;
+    gap: 30px;
     justify-content: center;
   }
   .del {
@@ -87,4 +88,35 @@ button.monBouton:hover {
     .xiaomi {
       display: flex;
     }
+    /* Styles pour personnaliser l'apparence du select */
+.select {
+  appearance: none; /* Supprime l'apparence native de l'élément */
+  padding: 10px 20px; /* Ajoute du rembourrage pour un aspect agréable */
+  font-size: 16px; /* Taille de police */
+  border: 2px solid #ccc; /* Bordure */
+  border-radius: 4px; /* Coins arrondis */
+  background-color: #fff; /* Couleur de fond */
+  cursor: pointer; /* Curseur de la souris au survol */
+}
+
+/* Style pour la flèche (qui apparaît sur le côté droit) */
+.select:after {
+  content: "\f107"; /* Utilisation d'une icône Unicode (flèche vers le bas) */
+  font-family: FontAwesome; /* Utilisation de la police FontAwesome pour les icônes */
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* Empêche la flèche de réagir aux événements de la souris */
+}
+/* Style pour le survol des options */
+.select:hover {
+  background-color: #646cff; /* Couleur de fond au survol */
+}
+.centerselect {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
   

@@ -28,29 +28,29 @@ export const MesSmartphones = [
           marque :"Xioami",
           imgp: huita,
           nom: "8a" ,
-          caractér: "caractéristique: Ram : 4gb " ,
+          caractér: "features: Ram : 4gb " ,
           prix : 21000 ,
           ram : "4gb",
           gb:"64gb",
-          Ajouté:"Ajouté au panier" , 
+          Ajouté:"Added to cart" , 
         },
         {
           imgp:neufa,
           nom:"9a" ,
-          caractér: "caractéristique : Ram : 2gb" ,
+          caractér: "features : Ram : 2gb" ,
           prix : 22000,
           ram : "2gb",
           gb:"32gb",
-          Ajouté:"Ajouté au panier",
+          Ajouté:"Added to cart",
         },
         {
           imgp:dixa,
           nom:"10a" ,
-          caractér: "caractéristique : Ram : 2gb" ,
+          caractér: "features : Ram : 2gb" ,
           prix : 24000,
           ram : "2gb",
           gb:"32gb",
-          Ajouté:"Ajouté au panier",
+          Ajouté:"Added to cart",
         }
       ]
     }, //////////////
@@ -63,30 +63,30 @@ export const MesSmartphones = [
           marque :"Apple" ,
           imgp: treize ,
           nom:"13" ,
-          caractér: "caractéristique : Ram : 6gb" ,
+          caractér: "features : Ram : 6gb" ,
           prix : 220000 ,
           ram : "6gb",
           gb:"32gb",
-          Ajouté:"Ajouté au panier",
+          Ajouté:"Added to cart",
         },
         {
           imgp: qautorze ,
           nom:"14" ,
-          caractér: "caractéristique : Ram : 4gb" ,
+          caractér: "features : Ram : 4gb" ,
           prix : 330000 ,
           ram : "4gb",
           gb:"64gb",
-          Ajouté:"Ajouté au panier",
+          Ajouté:"Added to cart",
         }, 
         {
           marque :"Apple" ,
           imgp: douze ,
           nom:"13" ,
-          caractér: "caractéristique : Ram : 3gb" ,
+          caractér: "features : Ram : 3gb" ,
           prix : 180000 ,
           ram : "6gb",
           gb:"32gb",
-          Ajouté:"Ajouté au panier",
+          Ajouté:"Added to cart",
         }
       ]
     },
@@ -100,29 +100,29 @@ export const MesSmartphones = [
           marque :"Smasung",
           imgp: ultra , 
           nom:"s21" ,
-          caractér: "caractéristique : Ram : 8gb" ,
+          caractér: "features : Ram : 8gb" ,
           prix : 220000 ,
           ram : "8gb",
           gb:"128gb",
-          Ajouté:"Ajouté au panier",
+          Ajouté:"Added to cart",
 
         },
         { //sam23
           imgp:ultra2, 
           nom:"s22" ,
-          caractér: "caractéristique : Ram : 12gb" ,
+          caractér: "features : Ram : 12gb" ,
           prix : 220000,
           ram : "12gb",
           gb:"256gb",
-          Ajouté:"Ajouté au panier",
+          Ajouté:"Added to cart",
         },{ //sam23
           imgp:sam23, 
           nom:"s23" ,
-          caractér: "caractéristique : Ram : 12gb" ,
+          caractér: "features : Ram : 12gb" ,
           prix : 250000,
           ram : "12gb",
           gb:"256gb",
-          Ajouté:"Ajouté au panier",
+          Ajouté:"Added to cart",
         }
       ]
     },
@@ -136,17 +136,17 @@ export const MesSmartphones = [
           marque :"Realme" ,
           nom:"relame8" ,
           imgp: relame8,
-          Ajouté:"Ajouté au panier",
+          Ajouté:"Added to cart",
 
         }, // renosept
         {
           imgp: relame9,
           nom:"relame9" ,
-          Ajouté:"Ajouté au panier",
+          Ajouté:"Added to cart",
         },{
           imgp: relame10,
           nom:"relame10" ,
-          Ajouté:"Ajouté au panier",
+          Ajouté:"Added to cart",
         }
       ]
     },
@@ -160,21 +160,21 @@ export const MesSmartphones = [
           marque :"Oppo" ,
           imgp: reno8,
           nom:"reno 8" ,//reno8
-          Ajouté:"Ajouté au panier",
+          Ajouté:"Added to cart",
         },
         {
           marque :"Oppo" ,
           nom:"reno 7" ,
           imgp: renosept,
           gb:"256gb",
-          Ajouté:"Ajouté au panier" ,
+          Ajouté:"Added to cart" ,
 
         },
         {
           marque :"Oppo" ,
           imgp: reno9,
           nom:"reno9" ,//reno8
-          Ajouté:"Ajouté au panier",
+          Ajouté:"Added to cart",
         }
       ]
     }

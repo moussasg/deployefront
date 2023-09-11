@@ -4,8 +4,10 @@ import logsi from "../../assets/logsi.png"
 import { useNavigate } from 'react-router-dom';
 import classe from "./ins.module.css"
 import { useAuth } from '../../autcontex';
+import Circular from '../../components/matui/chakra';
 function UserForm() {
   const navigate = useNavigate()
+  const [spin , setspin] = useState("Sign Up")
   const { setUserToken } = useAuth(); // Destructure setUserToken from AuthContext
   const [email, setEmail] = useState('');
   const [message , setmessage] = useState('') // message vide
@@ -16,6 +18,7 @@ function UserForm() {
     if (name === 'password') setPassword(value);
   };
   const handleSubmit = async (event) => {
+    setspin(<Circular/>)
     event.preventDefault();
     try {
       const response = await axios.post('https://backend-dkec.onrender.com/signup', { email, password })
@@ -45,7 +48,7 @@ function UserForm() {
         <h5>Password :</h5>
         <input type="password" name="password" value={password} onChange={handleChange} />
         <br/>
-        <button className={classe.monBouton} type="submit">Sign Up</button>
+        <button className={classe.monBouton} type="submit"><div className={classe.spin}>{spin}</div></button>
        </div>
        </form>
        </>

@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {useNavigate } from 'react-router-dom';
 import classes from "./index.module.css"
+import Circular from '../../components/matui/chakra';
 const Logout = () => {
+  const [spin , setspin] = useState("Logout")
   const navigate = useNavigate()
   const handleLogout = async () => {
+    setspin(<Circular/>)
     try {
       localStorage.removeItem('jwt');
       console.log('success logout')
@@ -15,7 +18,7 @@ const Logout = () => {
   };  
   return (
     <div>
-      <button className={classes.buttlogout} onClick={handleLogout}>Logout</button>
+      <button className={classes.buttlogout} onClick={handleLogout}>{spin}</button>
     </div>
   );
 };
