@@ -69,8 +69,18 @@ button.monBouton:hover {
     display: flex;
     justify-content: center;
   }
-  .prixtot {
-    background-color: indigo;
+  .prixtot:after {
+    content: "\f107"; /* Utilisation d'une icône Unicode (flèche vers le bas) */
+    font-family: FontAwesome; /* Utilisation de la police FontAwesome pour les icônes */
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none; /* Empêche la flèche de réagir aux événements de la souris */
+  }
+  /* Style pour le survol des options */
+  .prixtot:hover {
+    background-color: #646cff; /* Couleur de fond au survol */
   }
   .adroite {
     display: flex;
