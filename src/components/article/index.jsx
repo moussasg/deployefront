@@ -180,7 +180,7 @@ function Card() {
             ))}
           </ul>
         )}
-        <h3 ref={ref} className={classes.prixtot}> total Price : {prix}</h3> {/*prix = total*/}
+        <h3 ref={ref} className={classes.prixtot}> Total Price : {prix}</h3> {/*prix = total*/}
       </div> 
     );
   }
