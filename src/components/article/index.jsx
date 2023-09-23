@@ -188,6 +188,7 @@ function Card() {
     <>
       <div className={classes.filtre}>
       <Logout/>
+      <br></br>
         <Link to='/products'>  All Products</Link> 
         <br/>
     <br/>

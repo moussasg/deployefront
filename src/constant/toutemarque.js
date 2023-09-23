@@ -18,6 +18,7 @@ import relame9 from "../assets/realme9.jpg"
 import relame10 from "../assets/relame10.jpg"
 import reno8 from "../assets/reno8.jpg"
 import reno9 from "../assets/reno9.jpeg"
+import iphone15 from "../assets/iph15.jpg"
 export const MesSmartphones = [
     { //////////////
       id: "1",
@@ -80,12 +81,12 @@ export const MesSmartphones = [
         }, 
         {
           marque :"Apple" ,
-          imgp: douze ,
-          nom:"13" ,
-          caractér: "features : Ram : 3gb" ,
-          prix : 180000 ,
+          imgp: iphone15 ,
+          nom:"15" ,
+          caractér: "features : Ram : 6gb" ,
+          prix : 350000 ,
           ram : "6gb",
-          gb:"32gb",
+          gb:"1Tb",
           Ajouté:"Added to cart",
         }
       ]
@@ -137,16 +138,24 @@ export const MesSmartphones = [
           nom:"relame8" ,
           imgp: relame8,
           Ajouté:"Added to cart",
-
+          prix : 250000,
+          ram : "12gb",
+          gb:"256gb",
         }, // renosept
         {
           imgp: relame9,
           nom:"relame9" ,
           Ajouté:"Added to cart",
+          prix : 250000,
+          ram : "12gb",
+          gb:"256gb",
         },{
           imgp: relame10,
           nom:"relame10" ,
           Ajouté:"Added to cart",
+          prix : 250000,
+          ram : "12gb",
+          gb:"256gb",
         }
       ]
     },

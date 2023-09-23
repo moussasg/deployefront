@@ -18,7 +18,6 @@ button.monBouton:hover {
   background-color:#646cff;
 }
 .tout {
-  align-items: flex-start;
   display: flex;
 }
 @media screen and (max-width:1140px) {
@@ -106,7 +105,7 @@ button.monBouton:hover {
   font-size: 16px; /* Taille de police */
   border: 2px solid #ccc; /* Bordure */
   border-radius: 4px; /* Coins arrondis */
-  background-color: #fff; /* Couleur de fond */
+  background-color:#8a8aff; /* Couleur de fond */
   cursor: pointer; /* Curseur de la souris au survol */
 }
 
