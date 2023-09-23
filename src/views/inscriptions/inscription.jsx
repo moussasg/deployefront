@@ -9,14 +9,14 @@ function UserForm() {
   const navigate = useNavigate()
   const [spin , setspin] = useState("Sign Up")
   const { setUserToken } = useAuth(); // Destructure setUserToken from AuthContext
-  const [email, setEmail] = useState('');
   const [message , setmessage] = useState('') // message vide
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const handleChange = (event) => {
     const { name, value } = event.target;
     if (name === 'email') setEmail(value);
     if (name === 'password') setPassword(value);
-  };
+  }
   const handleSubmit = async (event) => {
     setspin(<Circular/>)
     event.preventDefault();
@@ -27,7 +27,7 @@ function UserForm() {
         const token = response.data.token; // 'jwt' le clé de stockage
         localStorage.setItem('jwt',token); // Save the token in localStorage
         setUserToken(token);
-        navigate('/login')
+        navigate('/products')
         setmessage('successfull inscription !')
       }
     }

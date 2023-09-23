@@ -61,7 +61,7 @@ function App() {
         </div>
         <a href='https://m.facebook.com/moussa.souag'>facebook <Fb /></a>
         <a href='https://instagram.com/hydra_smartphones?igshid=NTc4MTIwNjQ2YQ=='> instagram <Insta/> </a>
-        <a href='https://www.tiktok.com/@hydra_smartphones'> <img className='tik' src={Tik}/> tiktok</a>
+        <a href='https://www.tiktok.com/@hydra_smartphones'> <div>Tiktok</div> <img  src={Tik}/> </a>
         </div>
       <nav className="nav">
         <Link to="/">Home <Hom /> </Link>
@@ -76,7 +76,7 @@ function App() {
         <Route path='/logout' element={<Logout/>}/>
       <Route path='/' element={<Home/>}/>
       <Route path="/MesSmartphones/:id" element={<Card data={MesSmartphones} />} />
-      </Routes> 
+      </Routes>   
       <br/>
       <div className='mapos'>
         <h2> Location </h2>

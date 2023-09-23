@@ -81,6 +81,7 @@ button.monBouton:hover {
   /* Style pour le survol des options */
   .prixtot:hover {
     background-color: #646cff; /* Couleur de fond au survol */
+    width: 40vw;
   }
   .adroite {
     display: flex;
